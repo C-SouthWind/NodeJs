@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+
+    <script>
+        //箭头函数 - 重点 （在未来的项目开发中，比如小程序，unApp，一些常见的脚手架大量使用）
+        var sum = function (a,b) {
+            return a + b;
+        }
+
+        //ES箭头函数改进1
+        var sum = (a,b) =>{
+            return a + b;
+        }
+
+        //ES箭头函数改进2
+        var sum = (a,b) => a + b;
+
+        //类似于lambda表达式
+        /**
+         * 1:去掉function
+         * 2:在括号后面加箭头
+         * 3:如果逻辑代码仅有return可以直接省去（如果有逻辑体，就不能省略）
+         * 4:如果参数只有一个，可以把括号也省去（如果有多个参数就不能省去）
+         */
+
+        //例1
+        var arr = [1,2,3,4,5,6];
+        var newArr = arr.map(function (obj) {
+            return obj * 2;
+        });
+        console.log(newArr);
+
+        var newArr1 = arr.map( obj =>  obj * 2);
+        console.log(newArr1);
+
+    </script>
+</body>
+</html>

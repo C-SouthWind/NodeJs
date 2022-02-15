@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象初始化简写</title>
+</head>
+<body>
+
+<script>
+    //定义对象
+    var name = "chj";
+    var address = "杭州";
+    var info = {
+        name : name,
+        address : address,
+        go:function () {
+            console.log("我在杭州！")
+        }
+    };
+
+    //ES6简写
+    /**
+     * 1:如果key和变量的名字一致，可以只定义一次
+     * 2:如果value是一个函数，可以把 `:function`去掉，只剩下（）即可
+     */
+    let names = "chj";
+    let addresss = "杭州";
+    let infos = {
+        names,
+        addresss,
+        gos() {
+            console.log("我在杭州！")
+        }
+    };
+    console.log(infos.names);
+    console.log(infos.addresss);
+    infos.gos();
+
+
+    //例1
+    $.post("/index",{name:name,address:address},function () {
+                console.log("以前的写法")
+    })
+    $.post("/index",{name,address},function () {
+        console.log("ES6的写法")
+    })
+
+</script>
+</body>
+</html>

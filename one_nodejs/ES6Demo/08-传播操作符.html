@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传播操作符</title>
+</head>
+<body>
+
+<script>
+    //对象传播操作符
+    var person = {
+        name : "chj",
+        address : "杭州",
+        phone : "123456",
+        go(){
+            console.log("我在杭州！");
+        }
+    }
+    //解构出来
+    var {name,phone,...person2} = person;//person 中的属性name,address,phone,go 其中name,phone已经被解构出来  person2就是剩下的所有属性已经方法（address和go）
+    console.log(name);
+    console.log(phone);
+    console.log(person2);
+
+
+    /**
+     *  java 后台
+     *  数据格式: var userPage = {pages:10,users:[{},{}],pageNo:1,pageSize:100,count:100}
+     *  异步请求
+     *  $.post("/user/search",function(res){
+     *      //res = {pages:10,users:[{},{}],pageNo:1,pageSize:100,count:100};
+     *      var userPage = res;
+     *      var {pages,...userPage2} = userPage;
+     *  })
+     *
+     *
+     */
+</script>
+</body>
+</html>

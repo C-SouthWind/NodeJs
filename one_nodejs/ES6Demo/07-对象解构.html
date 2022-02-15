@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象解构</title>
+</head>
+<body>
+
+<script>
+    /**
+     *  对象是key:value 存在，获取对象属性和方法的方式有两种
+     *  1:通过。
+     *  2:通过[]
+     */
+    var name = "chj";
+    var address = "杭州";
+    var info = {
+        name,
+        address,
+        go() {
+            console.log("我在杭州！")
+        }
+    };
+    //通过.的方式
+    console.log(info.name);
+    console.log(info.address);
+    info.go();
+
+    //通过[]的方式
+    console.log(info["name"]);
+    console.log(info["address"]);
+    info["go"]();
+
+    //ES6对象解构  - 其实就是快速获取属性和方法的方式一种方式
+    var {name,address,go} = info;
+    //还原代码
+    //var name = info.name;
+    //var address = address.name;
+    console.log(name);
+    console.log(address);
+    go();
+
+
+</script>
+</body>
+</html>

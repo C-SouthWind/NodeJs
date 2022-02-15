@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //要对arr数组每个元素*2
+    let arr = [1,2,3,4,5,6];
+    //传统方式
+    let newarr = [];
+    for(let i=0;i<arr.length;i++){
+        newarr.push(arr[i]*2)
+    }
+    console.log(newarr);
+
+
+    //ES6 map -- 自带的循环,并且会把处理的值回填对应的位置
+    let newarr2 = arr.map(function (ele) {
+            return ele*2
+    });
+    console.log(newarr2);
+
+    let  newarr3 = arr.map(ele=>ele*2);
+    console.log(newarr3);
+
+    //map处理对象的数据
+    let users = [{age:10,name:"张三"},{age:15,name:"李四"},{age:12,name:"王五"}];
+    let user =  users.map(function (ele) {
+          ele.age = ele.age+1;
+          ele.check = true;//在数组里添加一个元素
+        return ele;
+    })
+    console.log(users)
+</script>
+
+</body>
+</html>

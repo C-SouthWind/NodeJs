@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数默认参数</title>
+</head>
+<body>
+
+<script>
+    //函数默认参数
+    function sum(a,b) {
+        return a + b;
+    }
+    var result = sum(3,4);
+    console.log(`result = ` + result);// 此时 a = 3, b = 4   3 + 4 = 7
+    var result1 = sum(3);
+    console.log(`result = ` + result1); // 此时 a = 3, b = undefined  , 3 + undefined = NAN
+
+    //ES6 传递一个默认的参数
+    function sum(a,b = 100) {
+        return a + b;
+    }
+    var result2 = sum(3,4);
+    console.log(`result = ` + result2);// 此时 a = 3, b = 4   3 + 4 = 7
+    var result3 = sum(3);
+    console.log(`result = ` + result3);// 此时 a = 3, b没有传参 使用默认值100  , 3 + 100 = 103
+
+</script>
+</body>
+</html>

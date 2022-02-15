@@ -1,0 +1,19 @@
+{
+  "name": "one_nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "babel Module -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "description": "",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
